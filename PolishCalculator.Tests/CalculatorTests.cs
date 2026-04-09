@@ -31,4 +31,14 @@ public class CalculatorTests
         double result = _calculator.Calculate(expression);
         Assert.Equal(expected, result, 0.0001);
     }
+
+    [Theory]
+    [InlineData("+ 1 * 2 3", 7)]
+    [InlineData("* + 1 2 + 3 4", 21)]
+    [InlineData("+ 1.5 2.5", 4.0)]
+    public void TestComplexExpressions(string expression, double expected)
+    {
+        double result = _calculator.Calculate(expression);
+        Assert.Equal(expected, result, 0.0001);
+    }
 }

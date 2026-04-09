@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace PolishCalculator;
 
@@ -19,12 +20,16 @@ public class Calculator : ICalculator
         {
             string token = tokens[i];
 
-            if (double.TryParse(token, out double number))
+            // Поддержка десятичных чисел с точкой
+            if (double.TryParse(token, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
             {
                 stack.Push(number);
             }
             else
             {
+                if (stack.Count < 2)
+                    throw new InvalidOperationException("Not enough operands");
+
                 double a = stack.Pop();
                 double b = stack.Pop();
                 double result = 0;
@@ -35,11 +40,15 @@ public class Calculator : ICalculator
                     case "-": result = a - b; break;
                     case "*": result = a * b; break;
                     case "/": result = a / b; break;
+                    default: throw new InvalidOperationException($"Unknown operator: {token}");
                 }
 
                 stack.Push(result);
             }
         }
+
+        if (stack.Count != 1)
+            throw new InvalidOperationException("Invalid expression");
 
         return stack.Pop();
     }
