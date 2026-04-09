@@ -13,6 +13,9 @@ public class Calculator : ICalculator
 {
     public double Calculate(string expression)
     {
+        if (string.IsNullOrWhiteSpace(expression))
+            throw new ArgumentException("Expression is empty");
+
         string[] tokens = expression.Trim().Split(' ');
         Stack<double> stack = new Stack<double>();
 
@@ -25,25 +28,29 @@ public class Calculator : ICalculator
             {
                 stack.Push(number);
             }
-            else
+            else if (IsOperator(token))
             {
                 if (stack.Count < 2)
-                    throw new InvalidOperationException("Not enough operands");
+                    throw new InvalidOperationException($"Not enough operands for {token}");
 
                 double a = stack.Pop();
                 double b = stack.Pop();
-                double result = 0;
 
-                switch (token)
+                double result = token switch
                 {
-                    case "+": result = a + b; break;
-                    case "-": result = a - b; break;
-                    case "*": result = a * b; break;
-                    case "/": result = a / b; break;
-                    default: throw new InvalidOperationException($"Unknown operator: {token}");
-                }
+                    "+" => a + b,
+                    "-" => a - b,
+                    "*" => a * b,
+                    "/" when b == 0 => throw new DivideByZeroException("Division by zero!"),
+                    "/" => a / b,
+                    _ => throw new InvalidOperationException($"Unknown operator: {token}")
+                };
 
                 stack.Push(result);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Invalid token: {token}");
             }
         }
 
@@ -51,5 +58,10 @@ public class Calculator : ICalculator
             throw new InvalidOperationException("Invalid expression");
 
         return stack.Pop();
+    }
+
+    private bool IsOperator(string token)
+    {
+        return token == "+" || token == "-" || token == "*" || token == "/";
     }
 }
