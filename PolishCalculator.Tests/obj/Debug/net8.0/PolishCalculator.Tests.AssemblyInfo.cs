@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PolishCalculator.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+964db6f5dbe8ee9c0ce8fd6f0fa774699c4de80c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c7153e24284d5cc0bb080cc7f4799769c80825f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PolishCalculator.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PolishCalculator.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
