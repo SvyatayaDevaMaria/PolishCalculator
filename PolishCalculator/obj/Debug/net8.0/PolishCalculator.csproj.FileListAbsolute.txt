@@ -1,0 +1,14 @@
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\bin\Debug\net8.0\PolishCalculator.exe
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\bin\Debug\net8.0\PolishCalculator.deps.json
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\bin\Debug\net8.0\PolishCalculator.runtimeconfig.json
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\bin\Debug\net8.0\PolishCalculator.dll
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\bin\Debug\net8.0\PolishCalculator.pdb
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.GeneratedMSBuildEditorConfig.editorconfig
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.AssemblyInfoInputs.cache
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.AssemblyInfo.cs
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.csproj.CoreCompileInputs.cache
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.dll
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\refint\PolishCalculator.dll
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.pdb
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\PolishCalculator.genruntimeconfig.cache
+H:\8_сем\_Надежность\PolishCalculator\PolishCalculator\obj\Debug\net8.0\ref\PolishCalculator.dll
